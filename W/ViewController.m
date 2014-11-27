@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "W_color.h"
+#import "WallpaperView.h"
 #import "RGBViewController.h"
 #import "RH7SlideUpTransitionAnimator.h"
 @interface ViewController () <FullScreeControllerProtocal, UIViewControllerTransitioningDelegate>
@@ -15,7 +15,7 @@
 @end
 
 @implementation ViewController {
-    W_color *aView;
+    WallpaperView *colorView;
     UIColor *color;
 }
 #pragma mark -
@@ -31,8 +31,20 @@
 - (void) uis
 {
     color = [UIColor colorWithRed:87/255.0 green:181/255.0 blue:188/255.0 alpha:1.0];
-    aView = [[W_color alloc] initWithFrame:self.view.frame andColor:color];
-    [self.view insertSubview:aView atIndex:0];
+    colorView = [[WallpaperView alloc] initWithFrame:self.view.frame andColor:color];
+    colorView.translatesAutoresizingMaskIntoConstraints = NO;
+
+
+    [self.view insertSubview:colorView atIndex:0];
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[colorView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:@{@"colorView":colorView}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[colorView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:@{@"colorView":colorView}]];
 }
 
 #pragma mark -
@@ -80,8 +92,8 @@
 -(void) fullScreenValueChangedR:(int)R g:(int)g b:(int)B
 {
     color = [UIColor colorWithRed:R/255.0 green:g/225.0 blue:B/255.0 alpha:1.0];
-    aView.color = color;
-    [aView setup];
+    colorView.color = color;
+    [colorView uiuColor];
 }
 #pragma mark -
 #pragma mark ===notification===

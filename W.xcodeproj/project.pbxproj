@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9474AB2A1A0BA63400251463 /* RH7SlideUpTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9474AB291A0BA63400251463 /* RH7SlideUpTransitionAnimator.m */; };
-		9477CA591A0A5BF7003DA8D6 /* FullScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9477CA581A0A5BF7003DA8D6 /* FullScreenController.m */; };
 		9477CA5C1A0A620C003DA8D6 /* RGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9477CA5B1A0A620C003DA8D6 /* RGBViewController.m */; };
 		9477CA5E1A0A668B003DA8D6 /* RBGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9477CA5D1A0A668B003DA8D6 /* RBGViewController.xib */; };
 		94F38D6D1A01381D00C014C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F38D6C1A01381D00C014C0 /* main.m */; };
@@ -18,7 +17,7 @@
 		94F38D781A01381D00C014C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F38D771A01381D00C014C0 /* Images.xcassets */; };
 		94F38D7B1A01381D00C014C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F38D791A01381D00C014C0 /* LaunchScreen.xib */; };
 		94F38D871A01381E00C014C0 /* WTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F38D861A01381E00C014C0 /* WTests.m */; };
-		94F38D921A01383300C014C0 /* W_color.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F38D911A01383300C014C0 /* W_color.m */; };
+		94F38D921A01383300C014C0 /* WallpaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F38D911A01383300C014C0 /* WallpaperView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +33,6 @@
 /* Begin PBXFileReference section */
 		9474AB281A0BA63400251463 /* RH7SlideUpTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RH7SlideUpTransitionAnimator.h; sourceTree = "<group>"; };
 		9474AB291A0BA63400251463 /* RH7SlideUpTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RH7SlideUpTransitionAnimator.m; sourceTree = "<group>"; };
-		9477CA571A0A5BF7003DA8D6 /* FullScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenController.h; sourceTree = "<group>"; };
-		9477CA581A0A5BF7003DA8D6 /* FullScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenController.m; sourceTree = "<group>"; };
 		9477CA5A1A0A620C003DA8D6 /* RGBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBViewController.h; sourceTree = "<group>"; };
 		9477CA5B1A0A620C003DA8D6 /* RGBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBViewController.m; sourceTree = "<group>"; };
 		9477CA5D1A0A668B003DA8D6 /* RBGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBGViewController.xib; sourceTree = "<group>"; };
@@ -52,8 +49,8 @@
 		94F38D801A01381E00C014C0 /* WTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F38D851A01381E00C014C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F38D861A01381E00C014C0 /* WTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTests.m; sourceTree = "<group>"; };
-		94F38D901A01383300C014C0 /* W_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_color.h; sourceTree = "<group>"; };
-		94F38D911A01383300C014C0 /* W_color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W_color.m; sourceTree = "<group>"; };
+		94F38D901A01383300C014C0 /* WallpaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperView.h; sourceTree = SOURCE_ROOT; };
+		94F38D911A01383300C014C0 /* WallpaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,16 +71,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94F38D5E1A01381D00C014C0 = {
+		94BF4E4D1A27980A0028B23A /* ViewControllerTransitionObject */ = {
+			isa = PBXGroup;
+			children = (
+				9474AB281A0BA63400251463 /* RH7SlideUpTransitionAnimator.h */,
+				9474AB291A0BA63400251463 /* RH7SlideUpTransitionAnimator.m */,
+			);
+			name = ViewControllerTransitionObject;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		94BF4E4E1A2798900028B23A /* RGBValueController */ = {
 			isa = PBXGroup;
 			children = (
 				9477CA5A1A0A620C003DA8D6 /* RGBViewController.h */,
 				9477CA5B1A0A620C003DA8D6 /* RGBViewController.m */,
 				9477CA5D1A0A668B003DA8D6 /* RBGViewController.xib */,
-				94F38D901A01383300C014C0 /* W_color.h */,
-				94F38D911A01383300C014C0 /* W_color.m */,
-				9474AB281A0BA63400251463 /* RH7SlideUpTransitionAnimator.h */,
-				9474AB291A0BA63400251463 /* RH7SlideUpTransitionAnimator.m */,
+			);
+			name = RGBValueController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		94BF4E4F1A2799150028B23A /* WallpaperView */ = {
+			isa = PBXGroup;
+			children = (
+				94F38D901A01383300C014C0 /* WallpaperView.h */,
+				94F38D911A01383300C014C0 /* WallpaperView.m */,
+			);
+			name = WallpaperView;
+			sourceTree = "<group>";
+		};
+		94F38D5E1A01381D00C014C0 = {
+			isa = PBXGroup;
+			children = (
 				94F38D691A01381D00C014C0 /* W */,
 				94F38D831A01381E00C014C0 /* WTests */,
 				94F38D681A01381D00C014C0 /* Products */,
@@ -106,11 +126,10 @@
 				94F38D6F1A01381D00C014C0 /* AppDelegate.m */,
 				94F38D711A01381D00C014C0 /* ViewController.h */,
 				94F38D721A01381D00C014C0 /* ViewController.m */,
-				9477CA571A0A5BF7003DA8D6 /* FullScreenController.h */,
-				9477CA581A0A5BF7003DA8D6 /* FullScreenController.m */,
 				94F38D741A01381D00C014C0 /* Main.storyboard */,
-				94F38D771A01381D00C014C0 /* Images.xcassets */,
-				94F38D791A01381D00C014C0 /* LaunchScreen.xib */,
+				94BF4E4F1A2799150028B23A /* WallpaperView */,
+				94BF4E4E1A2798900028B23A /* RGBValueController */,
+				94BF4E4D1A27980A0028B23A /* ViewControllerTransitionObject */,
 				94F38D6A1A01381D00C014C0 /* Supporting Files */,
 			);
 			path = W;
@@ -119,6 +138,8 @@
 		94F38D6A1A01381D00C014C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94F38D771A01381D00C014C0 /* Images.xcassets */,
+				94F38D791A01381D00C014C0 /* LaunchScreen.xib */,
 				94F38D6B1A01381D00C014C0 /* Info.plist */,
 				94F38D6C1A01381D00C014C0 /* main.m */,
 			);
@@ -245,12 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F38D731A01381D00C014C0 /* ViewController.m in Sources */,
-				94F38D921A01383300C014C0 /* W_color.m in Sources */,
+				94F38D921A01383300C014C0 /* WallpaperView.m in Sources */,
 				9477CA5C1A0A620C003DA8D6 /* RGBViewController.m in Sources */,
 				94F38D701A01381D00C014C0 /* AppDelegate.m in Sources */,
 				94F38D6D1A01381D00C014C0 /* main.m in Sources */,
 				9474AB2A1A0BA63400251463 /* RH7SlideUpTransitionAnimator.m in Sources */,
-				9477CA591A0A5BF7003DA8D6 /* FullScreenController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

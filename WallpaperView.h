@@ -1,5 +1,5 @@
 //
-//  W_color.h
+//  WallpaperView.h
 //  W
 //
 //  Created by liaa on 10/29/14.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface W_color : UIView
-- (void) setup;
+@interface WallpaperView : UIView
 -(instancetype)initWithFrame:(CGRect)frame andColor:(UIColor *)color;
+- (void) uisetup;
+- (void) uiuColor;
 @property UIColor *color;
 @end
