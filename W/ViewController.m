@@ -18,11 +18,12 @@
     WallpaperView *colorView;
     UIColor *color;
 }
+
 #pragma mark -
-#pragma mark ===vc lifecycle===
+#pragma mark ===vc life cycle===
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
     [self uis];
     
 }
@@ -49,9 +50,8 @@
 
 #pragma mark -
 #pragma mark ===uiupdate===
-
 #pragma mark -
-#pragma mark ===action===
+#pragma mark ===ibaction===
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     RGBViewController *vc = [[RGBViewController alloc] initWithNibName:@"RBGViewController" bundle:nil];
@@ -63,13 +63,7 @@
     vc.delegate = self;
     vc.transitioningDelegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;
-    
-    
     [self presentViewController:vc animated:YES completion:nil];
-}
-
-- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
 }
 #pragma mark -
 #pragma mark ===delegate and datasource===
@@ -95,43 +89,14 @@
     colorView.color = color;
     [colorView uiuColor];
 }
-#pragma mark -
-#pragma mark ===notification===
 
-#pragma mark -
-#pragma mark ===helper===
-- (void) sliderActionR:(id)sender
-{
-    [self update];
-}
-
-- (void) sliderActionG:(id)sender
-{
-    [self update];
-}
-
-- (void) sliderActionB:(id)sender
-{
-    [self update];
-}
-
-- (void) update {
-    
-//    UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:black/255.0 alpha:1];
-//    aView.color = color;
-//    [aView setup];
-}
-- (void) hideSlider {
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark delegate UIViewController
 - (BOOL) prefersStatusBarHidden
 {
     return YES;
 }
+#pragma mark -
+#pragma mark ===notification===
+#pragma mark -
+#pragma mark ===helper===
 @end
