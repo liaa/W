@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RGBViewController.h"
 @interface AppDelegate ()
 
 @end

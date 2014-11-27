@@ -9,14 +9,6 @@
 #import "W_color.h"
 
 @implementation W_color
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 - (void) setup {
     UIColor *finalColor = self.color;
     int floot = 8;
@@ -40,8 +32,6 @@
         
         
         if (self.layer.sublayers[floot - 1] != nil) {
-            NSLog(@"%@", self.color);
-            
                 CALayer *layer = self.layer.sublayers[(floot-1)-i];
                 layer.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:1].CGColor;
             continue;
@@ -63,8 +53,8 @@
         
         
     }
-    NSLog(@"%i", [self.layer.sublayers count]);
 }
+
 -(instancetype)initWithFrame:(CGRect)frame andColor:(UIColor *)color
 {
     self = [super initWithFrame:frame];
