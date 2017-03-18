@@ -18,4 +18,3 @@ W
   * 调整喜欢的颜色后单击屏幕隐藏控制器, 使用 iOS 自带截图功能即可以将截图作为壁纸了
 
 ![](https://raw.githubusercontent.com/liaa/W/master/inspiration.png)
-![](https://raw.githubusercontent.com/liaa/W/master/result.png)
