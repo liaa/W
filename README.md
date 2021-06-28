@@ -2,7 +2,7 @@ W
 =
 
 
-**W** is a Simple Wallpaper Making App
+**W** is a iOS wallpaper making app
 
 ## 说明
 1. 灵感来源于下面那张图片:
